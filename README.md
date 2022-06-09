@@ -1,48 +1,47 @@
 # Formulario Centro Pokemon
 
-Bienvenidos al primer proyecto integrador de la materia de especialización en
-Frontend I. En esta oportunidad, ayudaremos a nuestro amigo Ash a construir un
-formulario para que los entrenadores puedan atender a sus pokemons en el nuevo centro
-que Ash tiene en pueblo paleta.
+Bem-vindo ao primeiro projeto integrador da disciplina de especialização em
+Frontend I. Nesta oportunidade, ajudaremos nosso amigo Ash a construir um
+formulário para treinadores atenderem seus pokemons no novo centro
+que Ash tem em Pallet Town.
 
-## ¡Comenzamos!
+## Vamos começar!
 
-Una vez clonado el repositorio, lo primero que debemos hacer es instalar las dependencias.
-Para ello puedes utilizar alguno de los siguientes comandos:
+Uma vez que o repositório é clonado, a primeira coisa que precisamos fazer é instalar as dependências.
+Para fazer isso, você pode usar um dos seguintes comandos:
 
 ```
 npm install
 ```
 
-o
+ou
 
 ```
 yarn install
 ```
 
-Luego, puedes iniciar el proyecto con los comandos
+Então você pode iniciar o projeto com os comandos
 
 ```
 npm start
 ```
 
-o
+ou
 
 ```
 yarn start
 ```
 
-Ahora, tu proyecto se encontrará en la siguiente url: [http://localhost:3000](http://localhost:3000).
+Agora, seu projeto será encontrado na seguinte url: [http://localhost:3000](http://localhost:3000).
 
-## Primeros pasos
+## Primeiros passos
 
-Recuerda que el objetivo de esta clase es que puedas agregar la lógica necesaria para implementar:
+Lembre-se que o objetivo desta aula é que você possa adicionar a lógica necessária para implementar:
 
-- Un estado local, que te permita controlar el valor de cada input, y
-- Un estado global, para poder compartir el valor de los inputs con el formulario
-  de vista previa.
+- Um estado local, que permite controlar o valor de cada entrada.
+- Um estado global, para poder compartilhar o valor das entradas com o formulário visualização.
 
-A lo largo del código, encontrarás algunos comentarios y sugerencias que te orientarán
-acerca de los pasos necesarios para completar la actividad.
+Ao longo do código, você encontrará alguns comentários e sugestões que o guiarão
+sobre os passos necessários para completar a atividade.
 
-¡Manos a la obra!
+Mãos à obra!
