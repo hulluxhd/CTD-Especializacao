@@ -5,6 +5,7 @@ import treinador from "../../assets/treinador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input";
 import Detalhe from "./detalhe";
+import ReducerProvider from "../../context/contextoFormulario";
 
 // Neste componente temos nosso formulário e dentro dele
 // temos os componentes que precisam consumir nosso estado.
@@ -33,25 +34,27 @@ const Formulario = () => {
            Se ao menos tivéssemos uma maneira de "encapsular" nossos componentes
            para que possam acessar o estado global.
           */}
-          <div className="inputs">
-            <div>
-              <p className="nome-secao">
-                <img src={treinador} alt="treinador" />
-                <span>Treinador</span>
-              </p>
-              <Input name="nome" label="Nome" />
-              <Input name="sobrenome" label="Sobrenome" />
-              <Input name="email" label="Email" type="email" />
+          <ReducerProvider>
+            <div className="inputs">
+              <div>
+                <p className="nome-secao">
+                  <img src={treinador} alt="treinador" />
+                  <span>Treinador</span>
+                </p>
+                <Input name="nome" label="Nome" />
+                <Input name="sobrenome" label="Sobrenome" />
+                <Input name="email" label="Email" type="email" />
+              </div>
+              <div>
+                <p className="nome-secao">
+                  <img src={pikachu} alt="pikachu" />
+                  <span>Pokémon</span>
+                </p>
+                <Input name="nomePokemon" label="Nome" />
+              </div>
             </div>
-            <div>
-              <p className="nome-secao">
-                <img src={pikachu} alt="pikachu" />
-                <span>Pokémon</span>
-              </p>
-              <Input name="nomePokemon" label="Nome" />
-            </div>
-          </div>
-          <Detalhe />
+            <Detalhe />
+          </ReducerProvider>
         </div>
       </div>
     </>

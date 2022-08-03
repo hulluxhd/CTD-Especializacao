@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InfoContext } from "../../context/contextoFormulario";
 
 const Detalhe = () => {
   // Aqui devemos pegar os dados do formulário para podermos mostrá-lo em a visualização.
-
+  const { state } = useContext(InfoContext)
   return (
     <div className="detalhe-formulario">
       <div className="cabecalho">
@@ -11,15 +12,15 @@ const Detalhe = () => {
       <section className="dados-cliente">
         <h4>Dados do Treinador</h4>
         <div className="lista">
-          <p>Nome:</p>
-          <p>Sobrenome:</p>
-          <p>Email:</p>
+          <p>Nome: {state.nome}</p>
+          <p>Sobrenome: {state.sobrenome}</p>
+          <p>Email: {state.email}</p>
         </div>
       </section>
       <section className="dados-cliente">
         <h4>Dados do Pokémon</h4>
         <div className="lista">
-          <p>Nome:</p>
+          <p>Nome: {state.nomePokemon}</p>
         </div>
       </section>
       <button
