@@ -3,28 +3,46 @@
 const { useReducer, useContext, createContext } = require("react");
 
 const initialState = {
-    nomePokemon: '',
-    sobrenome: '',
-    email: '',
-    nome: '',
+    treinador: {
+        sobrenome: '',
+        email: '',
+        nome: '',
+    },
+    pokemon: {
+        nomePokemon: '',
+        tipoPokemon: '',
+        elementoPokemon: '',
+        alturaPokemon: '',
+        idadePokemon: ''
+    }
+
 }
 
 export const InfoContext = createContext()
 
-export default function ReducerProvider({ children }) {
-
-
-    const reducer = (state, action) => {
-        if (action.type === "ATUALIZAR") {
-            return {
-                ...state,
-                [action.event.name]: action.event.value
+const reducer = (state, action) => {
+    if (action.type === "ATUALIZAR_TREINADOR") {
+        return {
+            ...state,
+            treinador: {
+                ...state.treinador,
+                [action.payload.field]: action.payload.value
             }
         }
-        return alert('erro')
     }
+    if (action.type === "ATUALIZAR_POKEMON") {
+        return {
+            ...state,
+            pokemon: {
+                ...state.pokemon,
+                [action.payload.field]: action.payload.value
+            }
+        }
+    }
+    return alert('erro')
+}
 
-
+export default function ReducerProvider({ children }) {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 

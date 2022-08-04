@@ -123,10 +123,11 @@ h1 {
 }
 
 .detalhe-formulario {
-  width: 70%;
+  width: 100%;
   border: 1px solid darkgray;
   margin: 0 3rem;
   border-radius: 6px;
+  height: auto;
   box-shadow: 5px 5px lightgray;
 }
 
